@@ -1,0 +1,564 @@
+<html lang="en" class="scroll-smooth"><head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PUSAK | Public University Students’ Association of Kamalganj</title>
+    <meta name="description" content="A non-political, voluntary youth organization uniting public university students for the development of Kamalganj.">
+    
+    <!-- Google Fonts: Poppins -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <!-- Tailwind Configuration & Custom Styles -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        pusak: {
+                            green: '#0F6B3E',
+                            darkGreen: '#0A4A2A',
+                            gold: '#D4AF37',
+                            bg: '#F9FBF8',
+                            text: '#1F2933',
+                            gray: '#64748B'
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Poppins', 'sans-serif'],
+                    },
+                    backgroundImage: {
+                        'hero-pattern': "radial-gradient(circle at 50% 0%, rgba(15, 107, 62, 0.08) 0%, rgba(255, 255, 255, 0) 50%)",
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        /* Custom scrollbar for premium feel */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #F9FBF8;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #cbd5e1;
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #94a3b8;
+        }
+        
+        /* Smooth fade-in animation */
+        .fade-in-up {
+            animation: fadeInUp 0.8s ease-out forwards;
+            opacity: 0;
+            transform: translateY(20px);
+        }
+        
+        @keyframes fadeInUp {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .delay-100 { animation-delay: 0.1s; }
+        .delay-200 { animation-delay: 0.2s; }
+        .delay-300 { animation-delay: 0.3s; }
+    </style>
+<link id="all-fonts-link-font-geist" rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Geist:wght@300;400;500;600;700&amp;display=swap"><style id="all-fonts-style-font-geist">.font-geist { font-family: 'Geist', sans-serif !important; }</style><link id="all-fonts-link-font-roboto" rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;600;700&amp;display=swap"><style id="all-fonts-style-font-roboto">.font-roboto { font-family: 'Roboto', sans-serif !important; }</style><link id="all-fonts-link-font-montserrat" rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&amp;display=swap"><style id="all-fonts-style-font-montserrat">.font-montserrat { font-family: 'Montserrat', sans-serif !important; }</style><link id="all-fonts-link-font-playfair" rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;900&amp;display=swap"><style id="all-fonts-style-font-playfair">.font-playfair { font-family: 'Playfair Display', serif !important; }</style><link id="all-fonts-link-font-instrument-serif" rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Instrument+Serif:wght@400;500;600;700&amp;display=swap"><style id="all-fonts-style-font-instrument-serif">.font-instrument-serif { font-family: 'Instrument Serif', serif !important; }</style><link id="all-fonts-link-font-merriweather" rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700;900&amp;display=swap"><style id="all-fonts-style-font-merriweather">.font-merriweather { font-family: 'Merriweather', serif !important; }</style><link id="all-fonts-link-font-bricolage" rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@300;400;500;600;700&amp;display=swap"><style id="all-fonts-style-font-bricolage">.font-bricolage { font-family: 'Bricolage Grotesque', sans-serif !important; }</style><link id="all-fonts-link-font-jakarta" rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&amp;display=swap"><style id="all-fonts-style-font-jakarta">.font-jakarta { font-family: 'Plus Jakarta Sans', sans-serif !important; }</style><link id="all-fonts-link-font-manrope" rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&amp;display=swap"><style id="all-fonts-style-font-manrope">.font-manrope { font-family: 'Manrope', sans-serif !important; }</style><link id="all-fonts-link-font-space-grotesk" rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&amp;display=swap"><style id="all-fonts-style-font-space-grotesk">.font-space-grotesk { font-family: 'Space Grotesk', sans-serif !important; }</style><link id="all-fonts-link-font-work-sans" rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@300;400;500;600;700;800&amp;display=swap"><style id="all-fonts-style-font-work-sans">.font-work-sans { font-family: 'Work Sans', sans-serif !important; }</style><link id="all-fonts-link-font-pt-serif" rel="stylesheet" href="https://fonts.googleapis.com/css2?family=PT+Serif:wght@400;700&amp;display=swap"><style id="all-fonts-style-font-pt-serif">.font-pt-serif { font-family: 'PT Serif', serif !important; }</style><link id="all-fonts-link-font-geist-mono" rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Geist+Mono:wght@300;400;500;600;700&amp;display=swap"><style id="all-fonts-style-font-geist-mono">.font-geist-mono { font-family: 'Geist Mono', monospace !important; }</style><link id="all-fonts-link-font-space-mono" rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&amp;display=swap"><style id="all-fonts-style-font-space-mono">.font-space-mono { font-family: 'Space Mono', monospace !important; }</style><link id="all-fonts-link-font-quicksand" rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&amp;display=swap"><style id="all-fonts-style-font-quicksand">.font-quicksand { font-family: 'Quicksand', sans-serif !important; }</style><link id="all-fonts-link-font-nunito" rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;500;600;700;800&amp;display=swap"><style id="all-fonts-style-font-nunito">.font-nunito { font-family: 'Nunito', sans-serif !important; }</style><link id="all-fonts-link-font-newsreader" rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,400..800&amp;display=swap"><style id="all-fonts-style-font-newsreader">.font-newsreader { font-family: 'Newsreader', serif !important; }</style><link id="all-fonts-link-font-google-sans-flex" rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Google+Sans+Flex:wght@400;500;600;700&amp;display=swap"><style id="all-fonts-style-font-google-sans-flex">.font-google-sans-flex { font-family: 'Google Sans Flex', sans-serif !important; }</style><link id="all-fonts-link-font-oswald" rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500;600;700&amp;display=swap"><style id="all-fonts-style-font-oswald">.font-oswald { font-family: 'Oswald', sans-serif !important; }</style><link id="all-fonts-link-font-dm-sans" rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600;700&amp;display=swap"><style id="all-fonts-style-font-dm-sans">.font-dm-sans { font-family: 'DM Sans', sans-serif !important; }</style><link id="all-fonts-link-font-cormorant" rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&amp;display=swap"><style id="all-fonts-style-font-cormorant">.font-cormorant { font-family: 'Cormorant Garamond', serif !important; }</style></head>
+<body class="bg-pusak-bg text-pusak-text font-sans antialiased overflow-x-hidden selection:bg-pusak-green selection:text-white">
+
+    <!-- Navbar -->
+<nav class="fixed top-0 w-full z-50 bg-[#F9FBF8]/80 backdrop-blur-md border-b border-gray-100/50 transition-all duration-300">
+    <div class="flex h-16 max-w-7xl mx-auto px-6 items-center justify-between">
+        <!-- Logo -->
+        <a href="#" class="flex items-center gap-2 group">
+            <img src="index_res/logo.png" class="h-16">
+        </a>
+
+        <!-- Desktop Links -->
+        <div class="hidden md:flex items-center gap-8 text-sm font-medium text-pusak-text/80 relative">
+
+            <a href="#about" class="hover:text-pusak-green transition-colors">About</a>
+            <a href="#mission" class="hover:text-pusak-green transition-colors">Mission</a>
+            <a href="#values" class="hover:text-pusak-green transition-colors">Values</a>
+            <a href="#activities" class="hover:text-pusak-green transition-colors">Activities</a>
+
+            <!-- Files Dropdown -->
+            <div class="group relative">
+                <button class="hover:text-pusak-green transition-colors flex items-center gap-1">
+                    Files
+                    <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
+                    </svg>
+                </button>
+                <div class="absolute top-full left-0 mt-2 w-48 bg-white rounded-xl shadow-lg opacity-0 group-hover:opacity-100 invisible group-hover:visible transition-all duration-200 z-50">
+                    <a href="files/Brochure.pdf" download class="block px-4 py-2 text-pusak-text hover:bg-gray-100 rounded-tl-xl rounded-tr-xl">Brochure</a>
+                    <a href="files/Commitment.pdf" download class="block px-4 py-2 text-pusak-text hover:bg-gray-100">Commitment</a>
+                    <a href="files/Constitution.pdf" download class="block px-4 py-2 text-pusak-text hover:bg-gray-100">Constitution</a>
+                    <a href="files/Future_Plans.pdf" download class="block px-4 py-2 text-pusak-text hover:bg-gray-100">Future Plans</a>
+                </div>
+            </div>
+
+            <a href="#join" class="px-5 py-2.5 bg-pusak-green hover:bg-pusak-darkGreen text-white rounded-full transition-all shadow-sm hover:shadow-md hover:-translate-y-0.5 text-xs font-semibold tracking-wide">
+                Join Community
+            </a>
+        </div>
+
+        <!-- Mobile Menu Button -->
+        <button class="md:hidden text-pusak-text p-2">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-menu w-6 h-6">
+                <path d="M4 5h16"></path>
+                <path d="M4 12h16"></path>
+                <path d="M4 19h16"></path>
+            </svg>
+        </button>
+    </div>
+
+    <!-- Mobile Dropdown -->
+    <div class="md:hidden px-6 pt-4 pb-6 hidden" id="mobile-menu">
+        <a href="#about" class="block py-2 text-pusak-text/80 hover:text-pusak-green transition-colors">About</a>
+        <a href="#mission" class="block py-2 text-pusak-text/80 hover:text-pusak-green transition-colors">Mission</a>
+        <a href="#values" class="block py-2 text-pusak-text/80 hover:text-pusak-green transition-colors">Values</a>
+        <a href="#activities" class="block py-2 text-pusak-text/80 hover:text-pusak-green transition-colors">Activities</a>
+
+        <!-- Mobile Files Toggle -->
+        <div class="block">
+            <button class="w-full flex justify-between items-center py-2 text-pusak-text/80 hover:text-pusak-green transition-colors" id="mobile-files-btn">
+                Files
+                <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
+                </svg>
+            </button>
+            <div class="hidden pl-4 mt-2 flex flex-col gap-1" id="mobile-files-menu">
+                <a href="files/Brochure.pdf" class="py-1 text-pusak-text hover:text-pusak-green">Brochure</a>
+                <a href="files/Commitment.pdf" class="py-1 text-pusak-text hover:text-pusak-green">Commitment</a>
+                <a href="files/Constitution.pdf" class="py-1 text-pusak-text hover:text-pusak-green">Constitution</a>
+                <a href="files/Future_Plans.pdf" class="py-1 text-pusak-text hover:text-pusak-green">Future Plans</a>
+            </div>
+        </div>
+
+        <a href="#join" class="block mt-4 px-5 py-2.5 bg-pusak-green hover:bg-pusak-darkGreen text-white rounded-full text-xs font-semibold tracking-wide text-center">
+            Join Community
+        </a>
+    </div>
+</nav>
+
+<script>
+    // Mobile menu toggle
+    const mobileBtn = document.querySelector('nav button.md\\:hidden');
+    const mobileMenu = document.getElementById('mobile-menu');
+    const filesBtn = document.getElementById('mobile-files-btn');
+    const filesMenu = document.getElementById('mobile-files-menu');
+
+    mobileBtn.addEventListener('click', () => {
+        mobileMenu.classList.toggle('hidden');
+    });
+
+    filesBtn.addEventListener('click', () => {
+        filesMenu.classList.toggle('hidden');
+    });
+</script>
+
+
+
+    <!-- Navbar -->
+    <nav class="fixed top-0 w-full z-50 bg-white/80 backdrop-blur-md border-b border-gray-100/50">
+        <div class="flex h-20 max-w-7xl mx-auto px-6 items-center justify-between">
+            <!-- Logo -->
+            <a href="index.html" class="flex items-center gap-2">
+                <div class="w-10 h-10 bg-gradient-to-br from-pusak-green to-pusak-darkGreen rounded-lg flex items-center justify-center text-white font-bold text-xl shadow-md">P</div>
+                <div class="flex flex-col">
+                    <span class="font-bold tracking-tight text-lg text-pusak-green">PUSAK</span>
+                    <span class="text-[0.65rem] tracking-wider text-pusak-gray uppercase font-medium">Est. Kamalganj</span>
+                </div>
+            </a>
+
+            <!-- Links -->
+            <div class="hidden md:flex items-center gap-6 text-sm font-medium text-pusak-text/80">
+                <a href="index.html#about" class="hover:text-pusak-green transition-colors">About</a>
+                <a href="index.html#mission" class="hover:text-pusak-green transition-colors">Mission</a>
+                <a href="index.html#values" class="hover:text-pusak-green transition-colors">Values</a>
+                <a href="index.html#activities" class="hover:text-pusak-green transition-colors">Activities</a>
+                <a href="index.html#join" class="px-5 py-2.5 bg-pusak-green hover:bg-pusak-darkGreen text-white rounded-full text-xs font-semibold">Join Community</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="pt-32 pb-12 text-center bg-pusak-bg">
+        <h1 class="text-4xl md:text-5xl font-bold text-pusak-text mb-4">Relief and Aid</h1>
+        <p class="text-lg md:text-xl text-pusak-gray max-w-2xl mx-auto">Immediate response teams for floods and emergency humanitarian aid.</p>
+    </section>
+	
+	
+
+
+
+
+
+
+
+
+
+
+<!-- Flood Relief Slider Section -->
+<section class="bg-pusak-bg py-20">
+    <div class="max-w-7xl mx-auto px-6">
+
+        <!-- Flood Slider -->
+        <h2 class="text-4xl md:text-5xl text-pusak-text text-center mb-8">Flood Relief Projects</h2>
+        <div class="relative w-full h-[60vh] overflow-hidden rounded-xl shadow-lg slider-container">
+            <div class="slider flex transition-transform duration-500">
+                <!-- Slide 1 -->
+                <div class="min-w-full h-[60vh] relative">
+                    <img src="flood/1.jpg" alt="Flood Relief" class="w-full h-full object-cover">
+                    <div class="absolute bottom-5 left-5 bg-white/70 text-pusak-text px-4 py-2 rounded-md text-sm md:text-base">
+                        Flood Relief in Kamalganj
+                    </div>
+                </div>
+                <!-- Slide 2 -->
+                <div class="min-w-full h-[60vh] relative">
+                    <img src="flood/2.jpg" alt="Medical Aid" class="w-full h-full object-cover">
+                    <div class="absolute bottom-5 left-5 bg-white/70 text-pusak-text px-4 py-2 rounded-md text-sm md:text-base">
+                        Medical Aid Distribution
+                    </div>
+                </div>
+                <!-- Slide 3 -->
+                <div class="min-w-full h-[60vh] relative">
+                    <img src="flood/3.jpg" alt="Food Supplies" class="w-full h-full object-cover">
+                    <div class="absolute bottom-5 left-5 bg-white/70 text-pusak-text px-4 py-2 rounded-md text-sm md:text-base">
+                        Emergency Food Supplies
+                    </div>
+                </div>
+                <!-- Slide 4 -->
+                <div class="min-w-full h-[60vh] relative">
+                    <img src="flood/4.jpg" alt="Shelter Assistance" class="w-full h-full object-cover">
+                    <div class="absolute bottom-5 left-5 bg-white/70 text-pusak-text px-4 py-2 rounded-md text-sm md:text-base">
+                        Shelter Assistance
+                    </div>
+                </div>
+                <!-- Slide 5 -->
+                <div class="min-w-full h-[60vh] relative">
+                    <img src="flood/5.jpg" alt="Clean Water Distribution" class="w-full h-full object-cover">
+                    <div class="absolute bottom-5 left-5 bg-white/70 text-pusak-text px-4 py-2 rounded-md text-sm md:text-base">
+                        Clean Water Distribution
+                    </div>
+                </div>
+                <!-- Slide 6 -->
+                <div class="min-w-full h-[60vh] relative">
+                    <img src="flood/6.jpg" alt="Medical Camp" class="w-full h-full object-cover">
+                    <div class="absolute bottom-5 left-5 bg-white/70 text-pusak-text px-4 py-2 rounded-md text-sm md:text-base">
+                        Medical Camp
+                    </div>
+                </div>
+                <!-- Slide 7 -->
+                <div class="min-w-full h-[60vh] relative">
+                    <img src="flood/7.jpg" alt="Food Pack Distribution" class="w-full h-full object-cover">
+                    <div class="absolute bottom-5 left-5 bg-white/70 text-pusak-text px-4 py-2 rounded-md text-sm md:text-base">
+                        Food Pack Distribution
+                    </div>
+                </div>
+                <!-- Slide 8 -->
+                <div class="min-w-full h-[60vh] relative">
+                    <img src="flood/8.jpg" alt="Community Volunteers" class="w-full h-full object-cover">
+                    <div class="absolute bottom-5 left-5 bg-white/70 text-pusak-text px-4 py-2 rounded-md text-sm md:text-base">
+                        Community Volunteers
+                    </div>
+                </div>
+                <!-- Slide 9 -->
+                <div class="min-w-full h-[60vh] relative">
+                    <img src="flood/9.jpg" alt="First Aid Support" class="w-full h-full object-cover">
+                    <div class="absolute bottom-5 left-5 bg-white/70 text-pusak-text px-4 py-2 rounded-md text-sm md:text-base">
+                        First Aid Support
+                    </div>
+                </div>
+                <!-- Slide 10 -->
+                <div class="min-w-full h-[60vh] relative">
+                    <img src="flood/10.jpg" alt="Emergency Evacuation" class="w-full h-full object-cover">
+                    <div class="absolute bottom-5 left-5 bg-white/70 text-pusak-text px-4 py-2 rounded-md text-sm md:text-base">
+                        Emergency Evacuation
+                    </div>
+                </div>
+                <!-- Slide 11 -->
+                <div class="min-w-full h-[60vh] relative">
+                    <img src="flood/11.jpg" alt="Clothing Distribution" class="w-full h-full object-cover">
+                    <div class="absolute bottom-5 left-5 bg-white/70 text-pusak-text px-4 py-2 rounded-md text-sm md:text-base">
+                        Clothing Distribution
+                    </div>
+                </div>
+                <!-- Slide 12 -->
+                <div class="min-w-full h-[60vh] relative">
+                    <img src="flood/12.jpg" alt="Education Support" class="w-full h-full object-cover">
+                    <div class="absolute bottom-5 left-5 bg-white/70 text-pusak-text px-4 py-2 rounded-md text-sm md:text-base">
+                        Education Support
+                    </div>
+                </div>
+                <!-- Slide 13 -->
+                <div class="min-w-full h-[60vh] relative">
+                    <img src="flood/13.jpg" alt="Rescue Operations" class="w-full h-full object-cover">
+                    <div class="absolute bottom-5 left-5 bg-white/70 text-pusak-text px-4 py-2 rounded-md text-sm md:text-base">
+                        Rescue Operations
+                    </div>
+                </div>
+                <!-- Slide 14 -->
+                <div class="min-w-full h-[60vh] relative">
+                    <img src="flood/14.jpg" alt="Community Relief" class="w-full h-full object-cover">
+                    <div class="absolute bottom-5 left-5 bg-white/70 text-pusak-text px-4 py-2 rounded-md text-sm md:text-base">
+                        Community Relief
+                    </div>
+                </div>
+            </div>
+
+            <!-- Slider Controls -->
+            <button class="prev absolute top-1/2 left-5 -translate-y-1/2 bg-white/50 hover:bg-pusak-green text-pusak-text hover:text-white rounded-full p-3 transition-colors">
+                <i data-lucide="chevron-left" class="w-5 h-5"></i>
+            </button>
+            <button class="next absolute top-1/2 right-5 -translate-y-1/2 bg-white/50 hover:bg-pusak-green text-pusak-text hover:text-white rounded-full p-3 transition-colors">
+                <i data-lucide="chevron-right" class="w-5 h-5"></i>
+            </button>
+        </div>
+    </div>
+</section>
+
+
+
+<!-- Flood Relief Slider Section -->
+<section class="bg-pusak-bg py-20">
+    <div class="max-w-7xl mx-auto px-6">
+
+        <!-- Flood Slider -->
+        <h2 class="text-4xl md:text-5xl text-pusak-text text-center mb-8">Earthquake Relief Projects</h2>
+        <div class="relative w-full h-[60vh] overflow-hidden rounded-xl shadow-lg slider-container">
+            <div class="slider flex transition-transform duration-500">
+                <!-- Slide 1 -->
+                <div class="min-w-full h-[60vh] relative">
+                    <img src="flood/1.jpg" alt="Flood Relief" class="w-full h-full object-cover">
+                    <div class="absolute bottom-5 left-5 bg-white/70 text-pusak-text px-4 py-2 rounded-md text-sm md:text-base">
+                        Flood Relief in Kamalganj
+                    </div>
+                </div>
+                <!-- Slide 2 -->
+                <div class="min-w-full h-[60vh] relative">
+                    <img src="flood/2.jpg" alt="Medical Aid" class="w-full h-full object-cover">
+                    <div class="absolute bottom-5 left-5 bg-white/70 text-pusak-text px-4 py-2 rounded-md text-sm md:text-base">
+                        Medical Aid Distribution
+                    </div>
+                </div>
+                <!-- Slide 3 -->
+                <div class="min-w-full h-[60vh] relative">
+                    <img src="flood/3.jpg" alt="Food Supplies" class="w-full h-full object-cover">
+                    <div class="absolute bottom-5 left-5 bg-white/70 text-pusak-text px-4 py-2 rounded-md text-sm md:text-base">
+                        Emergency Food Supplies
+                    </div>
+                </div>
+                <!-- Slide 4 -->
+                <div class="min-w-full h-[60vh] relative">
+                    <img src="flood/4.jpg" alt="Shelter Assistance" class="w-full h-full object-cover">
+                    <div class="absolute bottom-5 left-5 bg-white/70 text-pusak-text px-4 py-2 rounded-md text-sm md:text-base">
+                        Shelter Assistance
+                    </div>
+                </div>
+                <!-- Slide 5 -->
+                <div class="min-w-full h-[60vh] relative">
+                    <img src="flood/5.jpg" alt="Clean Water Distribution" class="w-full h-full object-cover">
+                    <div class="absolute bottom-5 left-5 bg-white/70 text-pusak-text px-4 py-2 rounded-md text-sm md:text-base">
+                        Clean Water Distribution
+                    </div>
+                </div>
+                <!-- Slide 6 -->
+                <div class="min-w-full h-[60vh] relative">
+                    <img src="flood/6.jpg" alt="Medical Camp" class="w-full h-full object-cover">
+                    <div class="absolute bottom-5 left-5 bg-white/70 text-pusak-text px-4 py-2 rounded-md text-sm md:text-base">
+                        Medical Camp
+                    </div>
+                </div>
+                <!-- Slide 7 -->
+                <div class="min-w-full h-[60vh] relative">
+                    <img src="flood/7.jpg" alt="Food Pack Distribution" class="w-full h-full object-cover">
+                    <div class="absolute bottom-5 left-5 bg-white/70 text-pusak-text px-4 py-2 rounded-md text-sm md:text-base">
+                        Food Pack Distribution
+                    </div>
+                </div>
+                <!-- Slide 8 -->
+                <div class="min-w-full h-[60vh] relative">
+                    <img src="flood/8.jpg" alt="Community Volunteers" class="w-full h-full object-cover">
+                    <div class="absolute bottom-5 left-5 bg-white/70 text-pusak-text px-4 py-2 rounded-md text-sm md:text-base">
+                        Community Volunteers
+                    </div>
+                </div>
+                <!-- Slide 9 -->
+                <div class="min-w-full h-[60vh] relative">
+                    <img src="flood/9.jpg" alt="First Aid Support" class="w-full h-full object-cover">
+                    <div class="absolute bottom-5 left-5 bg-white/70 text-pusak-text px-4 py-2 rounded-md text-sm md:text-base">
+                        First Aid Support
+                    </div>
+                </div>
+                <!-- Slide 10 -->
+                <div class="min-w-full h-[60vh] relative">
+                    <img src="flood/10.jpg" alt="Emergency Evacuation" class="w-full h-full object-cover">
+                    <div class="absolute bottom-5 left-5 bg-white/70 text-pusak-text px-4 py-2 rounded-md text-sm md:text-base">
+                        Emergency Evacuation
+                    </div>
+                </div>
+                <!-- Slide 11 -->
+                <div class="min-w-full h-[60vh] relative">
+                    <img src="flood/11.jpg" alt="Clothing Distribution" class="w-full h-full object-cover">
+                    <div class="absolute bottom-5 left-5 bg-white/70 text-pusak-text px-4 py-2 rounded-md text-sm md:text-base">
+                        Clothing Distribution
+                    </div>
+                </div>
+                <!-- Slide 12 -->
+                <div class="min-w-full h-[60vh] relative">
+                    <img src="flood/12.jpg" alt="Education Support" class="w-full h-full object-cover">
+                    <div class="absolute bottom-5 left-5 bg-white/70 text-pusak-text px-4 py-2 rounded-md text-sm md:text-base">
+                        Education Support
+                    </div>
+                </div>
+                <!-- Slide 13 -->
+                <div class="min-w-full h-[60vh] relative">
+                    <img src="flood/13.jpg" alt="Rescue Operations" class="w-full h-full object-cover">
+                    <div class="absolute bottom-5 left-5 bg-white/70 text-pusak-text px-4 py-2 rounded-md text-sm md:text-base">
+                        Rescue Operations
+                    </div>
+                </div>
+                <!-- Slide 14 -->
+                <div class="min-w-full h-[60vh] relative">
+                    <img src="flood/14.jpg" alt="Community Relief" class="w-full h-full object-cover">
+                    <div class="absolute bottom-5 left-5 bg-white/70 text-pusak-text px-4 py-2 rounded-md text-sm md:text-base">
+                        Community Relief
+                    </div>
+                </div>
+            </div>
+
+            <!-- Slider Controls -->
+            <button class="prev absolute top-1/2 left-5 -translate-y-1/2 bg-white/50 hover:bg-pusak-green text-pusak-text hover:text-white rounded-full p-3 transition-colors">
+                <i data-lucide="chevron-left" class="w-5 h-5"></i>
+            </button>
+            <button class="next absolute top-1/2 right-5 -translate-y-1/2 bg-white/50 hover:bg-pusak-green text-pusak-text hover:text-white rounded-full p-3 transition-colors">
+                <i data-lucide="chevron-right" class="w-5 h-5"></i>
+            </button>
+        </div>
+    </div>
+</section>
+
+
+
+
+
+
+
+
+
+
+<script>
+document.querySelectorAll('.slider-container').forEach(container => {
+    const slider = container.querySelector('.slider');
+    const slides = container.querySelectorAll('.slider > div');
+    const prevBtn = container.querySelector('.prev');
+    const nextBtn = container.querySelector('.next');
+    let index = 0;
+
+    function showSlide(i) {
+        if(i < 0) index = slides.length - 1;
+        else if(i >= slides.length) index = 0;
+        else index = i;
+        slider.style.transform = `translateX(-${index * 100}%)`;
+    }
+
+    prevBtn.addEventListener('click', () => showSlide(index - 1));
+    nextBtn.addEventListener('click', () => showSlide(index + 1));
+
+    // Auto-slide every 5 seconds
+    //setInterval(() => showSlide(index + 1), 5000);
+});
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+    <!-- Footer -->
+    <footer class="bg-pusak-text pt-20 pb-10 text-white/90">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="grid md:grid-cols-4 gap-12 mb-16">
+                <div class="col-span-1 md:col-span-2">
+                    <div class="flex items-center gap-2 mb-6 ">
+                        <img src="../../index_res/logo-bg.png" class="h-20 ">
+                    </div>
+                    <p class="text-gray-400 text-sm leading-relaxed max-w-sm mb-6">
+                        Contributing to the sustainable development of Kamalganj Upazila through education, social service, and community-driven initiatives.
+                    </p>
+                    <div class="flex gap-4">
+                        <a href="#" class="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center hover:bg-pusak-green transition-colors text-white">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="facebook" class="lucide lucide-facebook w-5 h-5"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg>
+                        </a>
+                        <a href="#" class="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center hover:bg-pusak-green transition-colors text-white">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="twitter" class="lucide lucide-twitter w-5 h-5"><path d="M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.6 5.6 4.1 9 4-.9-4.2 4-6.6 7-3.8 1.1 0 3-1.2 3-1.2z"></path></svg>
+                        </a>
+                        <a href="#" class="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center hover:bg-pusak-green transition-colors text-white">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="linkedin" class="lucide lucide-linkedin w-5 h-5"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect width="4" height="12" x="2" y="9"></rect><circle cx="4" cy="4" r="2"></circle></svg>
+                        </a>
+                    </div>
+                </div>
+
+                <div>
+                    <h4 class="font-semibold mb-6 text-white">Organization</h4>
+                    <ul class="space-y-4 text-sm text-gray-400">
+                        <li><a href="#about" class="hover:text-pusak-gold transition-colors">About Us</a></li>
+                        <li><a href="#mission" class="hover:text-pusak-gold transition-colors">Mission &amp; Vision</a></li>
+                        <li><a href="#values" class="hover:text-pusak-gold transition-colors">Core Values</a></li>
+                        <li><a href="#activities" class="hover:text-pusak-gold transition-colors">Activities</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="font-semibold mb-6 text-white">Contact</h4>
+                    <ul class="space-y-4 text-sm text-gray-400">
+                        <li class="flex items-center gap-2">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="map-pin" class="lucide lucide-map-pin w-4 h-4 text-pusak-green"><path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"></path><circle cx="12" cy="10" r="3"></circle></svg>
+                            Kamalganj, Bangladesh
+                        </li>
+                        <li class="flex items-center gap-2">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="mail" class="lucide lucide-mail w-4 h-4 text-pusak-green"><path d="m22 7-8.991 5.727a2 2 0 0 1-2.009 0L2 7"></path><rect x="2" y="4" width="20" height="16" rx="2"></rect></svg>
+                            info@pusak.org
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="border-t border-white/10 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
+                <p class="text-xs text-gray-500">© 2023 PUSAK. All rights reserved.</p>
+                <div class="flex gap-6 text-xs text-gray-500">
+                    <a href="#" class="hover:text-white transition-colors">Privacy Policy</a>
+                    <a href="#" class="hover:text-white transition-colors">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Initialize Icons -->
+    <script>
+        lucide.createIcons();
+    </script>
+
+</body></html>

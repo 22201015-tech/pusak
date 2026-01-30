@@ -40,7 +40,6 @@
             }
         }
     </script>
-
     <style>
         /* Custom scrollbar for premium feel */
         ::-webkit-scrollbar {
@@ -79,36 +78,97 @@
 <body class="bg-pusak-bg text-pusak-text font-sans antialiased overflow-x-hidden selection:bg-pusak-green selection:text-white">
 
     <!-- Navbar -->
-    <nav class="fixed top-0 w-full z-50 bg-[#F9FBF8]/80 backdrop-blur-md border-b border-gray-100/50 transition-all duration-300">
-        <div class="flex h-20 max-w-7xl mr-auto ml-auto pr-6 pl-6 items-center justify-between">
-            <!-- Logo -->
-            <a href="#" class="flex items-center gap-2 group">
-                <div class="w-10 h-10 bg-gradient-to-br from-pusak-green to-pusak-darkGreen rounded-lg flex items-center justify-center text-white font-bold text-xl shadow-md group-hover:shadow-lg transition-all duration-300">
-                    P
-                </div>
-                <div class="flex flex-col">
-                    <span class="font-bold tracking-tight text-lg leading-none text-pusak-green">PUSAK</span>
-                    <span class="text-[0.65rem] tracking-wider text-pusak-gray uppercase font-medium">Est. Kamalganj</span>
-                </div>
-            </a>
+<nav class="fixed top-0 w-full z-50 bg-[#F9FBF8]/80 backdrop-blur-md border-b border-gray-100/50 transition-all duration-300">
+    <div class="flex h-16 max-w-7xl mx-auto px-6 items-center justify-between">
+        <!-- Logo -->
+        <a href="#" class="flex items-center gap-2 group">
+            <img src="index_res/logo.png" class="h-16">
+        </a>
 
-            <!-- Desktop Links -->
-            <div class="hidden md:flex items-center gap-8 text-sm font-medium text-pusak-text/80">
-                <a href="#about" class="hover:text-pusak-green transition-colors">About</a>
-                <a href="#mission" class="hover:text-pusak-green transition-colors">Mission</a>
-                <a href="#values" class="hover:text-pusak-green transition-colors">Values</a>
-                <a href="#activities" class="hover:text-pusak-green transition-colors">Activities</a>
-                <a href="#join" class="px-5 py-2.5 bg-pusak-green hover:bg-pusak-darkGreen text-white rounded-full transition-all shadow-sm hover:shadow-md hover:-translate-y-0.5 text-xs font-semibold tracking-wide">
-                    Join Community
-                </a>
+        <!-- Desktop Links -->
+        <div class="hidden md:flex items-center gap-8 text-sm font-medium text-pusak-text/80 relative">
+
+            <a href="#about" class="hover:text-pusak-green transition-colors">About</a>
+            <a href="#mission" class="hover:text-pusak-green transition-colors">Mission</a>
+            <a href="#values" class="hover:text-pusak-green transition-colors">Values</a>
+            <a href="#activities" class="hover:text-pusak-green transition-colors">Activities</a>
+
+            <!-- Files Dropdown -->
+            <div class="group relative">
+                <button class="hover:text-pusak-green transition-colors flex items-center gap-1">
+                    Files
+                    <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
+                    </svg>
+                </button>
+                <div class="absolute top-full left-0 mt-2 w-48 bg-white rounded-xl shadow-lg opacity-0 group-hover:opacity-100 invisible group-hover:visible transition-all duration-200 z-50">
+                    <a href="files/Brochure.pdf" download class="block px-4 py-2 text-pusak-text hover:bg-gray-100 rounded-tl-xl rounded-tr-xl">Brochure</a>
+                    <a href="files/Commitment.pdf" download class="block px-4 py-2 text-pusak-text hover:bg-gray-100">Commitment</a>
+                    <a href="files/Constitution.pdf" download class="block px-4 py-2 text-pusak-text hover:bg-gray-100">Constitution</a>
+                    <a href="files/Future_Plans.pdf" download class="block px-4 py-2 text-pusak-text hover:bg-gray-100">Future Plans</a>
+                </div>
             </div>
 
-            <!-- Mobile Menu Button -->
-            <button class="md:hidden text-pusak-text p-2">
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="menu" class="lucide lucide-menu w-6 h-6"><path d="M4 5h16"></path><path d="M4 12h16"></path><path d="M4 19h16"></path></svg>
-            </button>
+            <a href="#join" class="px-5 py-2.5 bg-pusak-green hover:bg-pusak-darkGreen text-white rounded-full transition-all shadow-sm hover:shadow-md hover:-translate-y-0.5 text-xs font-semibold tracking-wide">
+                Join Community
+            </a>
         </div>
-    </nav>
+
+        <!-- Mobile Menu Button -->
+        <button class="md:hidden text-pusak-text p-2">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-menu w-6 h-6">
+                <path d="M4 5h16"></path>
+                <path d="M4 12h16"></path>
+                <path d="M4 19h16"></path>
+            </svg>
+        </button>
+    </div>
+
+    <!-- Mobile Dropdown -->
+    <div class="md:hidden px-6 pt-4 pb-6 hidden" id="mobile-menu">
+        <a href="#about" class="block py-2 text-pusak-text/80 hover:text-pusak-green transition-colors">About</a>
+        <a href="#mission" class="block py-2 text-pusak-text/80 hover:text-pusak-green transition-colors">Mission</a>
+        <a href="#values" class="block py-2 text-pusak-text/80 hover:text-pusak-green transition-colors">Values</a>
+        <a href="#activities" class="block py-2 text-pusak-text/80 hover:text-pusak-green transition-colors">Activities</a>
+
+        <!-- Mobile Files Toggle -->
+        <div class="block">
+            <button class="w-full flex justify-between items-center py-2 text-pusak-text/80 hover:text-pusak-green transition-colors" id="mobile-files-btn">
+                Files
+                <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
+                </svg>
+            </button>
+            <div class="hidden pl-4 mt-2 flex flex-col gap-1" id="mobile-files-menu">
+                <a href="files/Brochure.pdf" class="py-1 text-pusak-text hover:text-pusak-green">Brochure</a>
+                <a href="files/Commitment.pdf" class="py-1 text-pusak-text hover:text-pusak-green">Commitment</a>
+                <a href="files/Constitution.pdf" class="py-1 text-pusak-text hover:text-pusak-green">Constitution</a>
+                <a href="files/Future_Plans.pdf" class="py-1 text-pusak-text hover:text-pusak-green">Future Plans</a>
+            </div>
+        </div>
+
+        <a href="#join" class="block mt-4 px-5 py-2.5 bg-pusak-green hover:bg-pusak-darkGreen text-white rounded-full text-xs font-semibold tracking-wide text-center">
+            Join Community
+        </a>
+    </div>
+</nav>
+
+<script>
+    // Mobile menu toggle
+    const mobileBtn = document.querySelector('nav button.md\\:hidden');
+    const mobileMenu = document.getElementById('mobile-menu');
+    const filesBtn = document.getElementById('mobile-files-btn');
+    const filesMenu = document.getElementById('mobile-files-menu');
+
+    mobileBtn.addEventListener('click', () => {
+        mobileMenu.classList.toggle('hidden');
+    });
+
+    filesBtn.addEventListener('click', () => {
+        filesMenu.classList.toggle('hidden');
+    });
+</script>
+
 
     <!-- Hero Section -->
     <section class="lg:pt-48 lg:pb-32 overflow-hidden pt-32 pb-20 relative">
@@ -158,9 +218,16 @@
                 <div class="relative">
                     <div class="aspect-[4/3] rounded-2xl bg-gray-100 overflow-hidden relative shadow-2xl shadow-gray-200/50">
                          <!-- Abstract representation of unity/students -->
-                         <div class="flex bg-gradient-to-br from-pusak-green/5 to-pusak-gold/5 absolute top-0 right-0 bottom-0 left-0 items-center justify-center">
+                         <!-- <div class="flex bg-gradient-to-br from-pusak-green/5 to-pusak-gold/5 absolute top-0 right-0 bottom-0 left-0 items-center justify-center">
                             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="users" class="lucide lucide-users w-24 h-24 text-pusak-green/20"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path><path d="M16 3.128a4 4 0 0 1 0 7.744"></path><path d="M22 21v-2a4 4 0 0 0-3-3.87"></path><circle cx="9" cy="7" r="4"></circle></svg>
-                         </div>
+                         </div> -->
+						     <img
+        src="index_res\students.jpg"
+        alt="Seminars"
+        class="absolute inset-0 w-full h-full object-cover 
+           transition-transform duration-500 ease-out
+           group-hover:scale-105"
+    />
                     </div>
                     <!-- Stats Card -->
                     <div class="absolute -bottom-8 -right-8 md:right-8 bg-white p-6 rounded-xl shadow-xl border border-gray-100 max-w-xs">
@@ -364,54 +431,140 @@
             </div>
 
             <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-                <!-- Activity Item -->
-                <div class="group relative overflow-hidden rounded-2xl bg-gray-50 aspect-[4/5] md:aspect-[3/4]">
-                    <div class="absolute inset-0 p-6 flex flex-col justify-end z-20">
-                        <div class="w-10 h-10 bg-white/90 backdrop-blur rounded-full flex items-center justify-center text-pusak-text mb-3 shadow-md">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="mic-2" class="lucide lucide-mic-2 w-5 h-5"><path d="m11 7.601-5.994 8.19a1 1 0 0 0 .1 1.298l.817.818a1 1 0 0 0 1.314.087L15.09 12"></path><path d="M16.5 21.174C15.5 20.5 14.372 20 13 20c-2.058 0-3.928 2.356-6 2-2.072-.356-2.775-3.369-1.5-4.5"></path><circle cx="16" cy="7" r="5"></circle></svg>
-                        </div>
-                        <h3 class="text-xl font-semibold text-pusak-text mb-1">Seminars</h3>
-                        <p class="text-sm text-pusak-text/70">Knowledge sharing</p>
-                    </div>
-                    <!-- Hover gradient -->
-                    <div class="absolute inset-0 bg-gradient-to-t from-gray-200 to-transparent opacity-50 group-hover:opacity-100 transition-opacity duration-300"></div>
-                </div>
+			    
+<!-- Activity Item -->
+<div class="group relative overflow-hidden rounded-2xl bg-gray-50 aspect-[4/5] md:aspect-[3/4]">
 
-                <!-- Activity Item -->
-                <div class="group relative overflow-hidden rounded-2xl bg-gray-50 aspect-[4/5] md:aspect-[3/4]">
-                     <div class="absolute inset-0 p-6 flex flex-col justify-end z-20">
-                        <div class="w-10 h-10 bg-white/90 backdrop-blur rounded-full flex items-center justify-center text-pusak-text mb-3 shadow-md">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="laptop" class="lucide lucide-laptop w-5 h-5"><path d="M18 5a2 2 0 0 1 2 2v8.526a2 2 0 0 0 .212.897l1.068 2.127a1 1 0 0 1-.9 1.45H3.62a1 1 0 0 1-.9-1.45l1.068-2.127A2 2 0 0 0 4 15.526V7a2 2 0 0 1 2-2z"></path><path d="M20.054 15.987H3.946"></path></svg>
-                        </div>
-                        <h3 class="text-xl font-semibold text-pusak-text mb-1">Webinars</h3>
-                        <p class="text-sm text-pusak-text/70">Online learning</p>
-                    </div>
-                    <div class="absolute inset-0 bg-gradient-to-t from-gray-200 to-transparent opacity-50 group-hover:opacity-100 transition-opacity duration-300"></div>
-                </div>
+    <!-- FULL CARD IMAGE -->
+    <img
+        src="activity/Seminars.jpg"
+        alt="Seminars"
+        class="absolute inset-0 w-full h-full object-cover 
+           transition-transform duration-500 ease-out
+           group-hover:scale-105"
+    />
 
-                 <!-- Activity Item -->
-                 <div class="group relative overflow-hidden rounded-2xl bg-gray-50 aspect-[4/5] md:aspect-[3/4]">
-                    <div class="absolute inset-0 p-6 flex flex-col justify-end z-20">
-                       <div class="w-10 h-10 bg-white/90 backdrop-blur rounded-full flex items-center justify-center text-pusak-text mb-3 shadow-md">
-                           <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="briefcase" class="lucide lucide-briefcase w-5 h-5"><path d="M16 20V4a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path><rect width="20" height="14" x="2" y="6" rx="2"></rect></svg>
-                       </div>
-                       <h3 class="text-xl font-semibold text-pusak-text mb-1">Career Guidance</h3>
-                       <p class="text-sm text-pusak-text/70">Future planning</p>
-                   </div>
-                   <div class="absolute inset-0 bg-gradient-to-t from-gray-200 to-transparent opacity-50 group-hover:opacity-100 transition-opacity duration-300"></div>
-               </div>
+    <!-- Content Overlay -->
+    <div class="absolute inset-0 p-6 flex flex-col justify-end z-20">
+        <div class="w-10 h-10 bg-white/90 backdrop-blur rounded-full flex items-center justify-center text-pusak-text mb-3 shadow-md">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                class="w-5 h-5">
+                <path d="m11 7.601-5.994 8.19a1 1 0 0 0 .1 1.298l.817.818a1 1 0 0 0 1.314.087L15.09 12"></path>
+                <path d="M16.5 21.174C15.5 20.5 14.372 20 13 20c-2.058 0-3.928 2.356-6 2-2.072-.356-2.775-3.369-1.5-4.5"></path>
+                <circle cx="16" cy="7" r="5"></circle>
+            </svg>
+        </div>
 
-                <!-- Activity Item -->
-                <div class="group relative overflow-hidden rounded-2xl bg-gray-50 aspect-[4/5] md:aspect-[3/4]">
-                    <div class="absolute inset-0 p-6 flex flex-col justify-end z-20">
-                       <div class="w-10 h-10 bg-white/90 backdrop-blur rounded-full flex items-center justify-center text-pusak-text mb-3 shadow-md">
-                           <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="megaphone" class="lucide lucide-megaphone w-5 h-5"><path d="M11 6a13 13 0 0 0 8.4-2.8A1 1 0 0 1 21 4v12a1 1 0 0 1-1.6.8A13 13 0 0 0 11 14H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2z"></path><path d="M6 14a12 12 0 0 0 2.4 7.2 2 2 0 0 0 3.2-2.4A8 8 0 0 1 10 14"></path><path d="M8 6v8"></path></svg>
-                       </div>
-                       <h3 class="text-xl font-semibold text-pusak-text mb-1">Campaigns</h3>
-                       <p class="text-sm text-pusak-text/70">Social awareness</p>
-                   </div>
-                   <div class="absolute inset-0 bg-gradient-to-t from-gray-200 to-transparent opacity-50 group-hover:opacity-100 transition-opacity duration-300"></div>
-               </div>
+        <h3 class="text-xl text-white font-semibold text-pusak-text mb-1">Seminars</h3>
+        <p class="text-sm text-white">Knowledge sharing</p>
+    </div>
+
+    <!-- Hover gradient -->
+    <div class="absolute inset-0 bg-gradient-to-t from-gray-900/60 to-transparent 
+                opacity-50 group-hover:opacity-100 transition-opacity duration-300">
+    </div>
+</div>
+
+
+<!-- Activity Item -->
+<div class="group relative overflow-hidden rounded-2xl bg-gray-50 aspect-[4/5] md:aspect-[3/4]">
+
+    <!-- FULL CARD IMAGE -->
+    <img
+        src="activity/Webinars.jpg"
+        alt="Webinars"
+        class="absolute inset-0 w-full h-full object-cover
+               transition-transform duration-500 ease-out
+               group-hover:scale-105"
+    />
+
+    <div class="absolute inset-0 p-6 flex flex-col justify-end z-20">
+        <div class="w-10 h-10 bg-white/90 backdrop-blur rounded-full flex items-center justify-center text-pusak-text mb-3 shadow-md">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="laptop" class="lucide lucide-laptop w-5 h-5"><path d="M18 5a2 2 0 0 1 2 2v8.526a2 2 0 0 0 .212.897l1.068 2.127a1 1 0 0 1-.9 1.45H3.62a1 1 0 0 1-.9-1.45l1.068-2.127A2 2 0 0 0 4 15.526V7a2 2 0 0 1 2-2z"></path><path d="M20.054 15.987H3.946"></path></svg>
+        </div>
+        <h3 class="text-xl text-white font-semibold text-pusak-text mb-1">Webinars</h3>
+        <p class="text-sm text-white">Online learning</p>
+    </div>
+
+    <div class="absolute inset-0 bg-gradient-to-t from-gray-900/60 to-transparent opacity-50 group-hover:opacity-100 transition-opacity duration-300"></div>
+</div>
+
+<!-- Activity Item -->
+<div class="group relative overflow-hidden rounded-2xl bg-gray-50 aspect-[4/5] md:aspect-[3/4]">
+
+    <!-- FULL CARD IMAGE -->
+    <img
+        src="activity/Career.jpg"
+        alt="Career Guidance"
+        class="absolute inset-0 w-full h-full object-cover
+               transition-transform duration-500 ease-out
+               group-hover:scale-105"
+    />
+
+    <div class="absolute inset-0 p-6 flex flex-col justify-end z-20">
+        <div class="w-10 h-10 bg-white/90 backdrop-blur rounded-full flex items-center justify-center text-pusak-text mb-3 shadow-md">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="briefcase" class="lucide lucide-briefcase w-5 h-5"><path d="M16 20V4a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path><rect width="20" height="14" x="2" y="6" rx="2"></rect></svg>
+        </div>
+        <h3 class="text-xl text-white font-semibold text-pusak-text mb-1">Career Guidance</h3>
+        <p class="text-sm text-white">Future planning</p>
+    </div>
+
+    <div class="absolute inset-0 bg-gradient-to-t from-gray-900/60 to-transparent opacity-50 group-hover:opacity-100 transition-opacity duration-300"></div>
+</div>
+
+<!-- Activity Item -->
+<div class="group relative overflow-hidden rounded-2xl bg-gray-50 aspect-[4/5] md:aspect-[3/4]">
+
+    <!-- FULL CARD IMAGE -->
+    <img
+        src="activity/Campaigns.jpg"
+        alt="Campaigns"
+        class="absolute inset-0 w-full h-full object-cover
+               transition-transform duration-500 ease-out
+               group-hover:scale-105"
+    />
+
+    <div class="absolute inset-0 p-6 flex flex-col justify-end z-20">
+        <div class="w-10 h-10 bg-white/90 backdrop-blur rounded-full flex items-center justify-center text-pusak-text mb-3 shadow-md">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="megaphone" class="lucide lucide-megaphone w-5 h-5"><path d="M11 6a13 13 0 0 0 8.4-2.8A1 1 0 0 1 21 4v12a1 1 0 0 1-1.6.8A13 13 0 0 0 11 14H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2z"></path><path d="M6 14a12 12 0 0 0 2.4 7.2 2 2 0 0 0 3.2-2.4A8 8 0 0 1 10 14"></path><path d="M8 6v8"></path></svg>
+        </div>
+        <h3 class="text-xl text-white font-semibold text-pusak-text mb-1">Campaigns</h3>
+        <p class="text-sm text-white">Social awareness</p>
+    </div>
+
+    <div class="absolute inset-0 bg-gradient-to-t from-gray-900/60 to-transparent opacity-50 group-hover:opacity-100 transition-opacity duration-300"></div>
+</div>
+
+<!-- Activity Item -->
+<a href="activity_galllery/relief/relief.html">
+<div class="group relative overflow-hidden rounded-2xl bg-gray-50 aspect-[4/5] md:aspect-[3/4]">
+
+    <!-- FULL CARD IMAGE -->
+    <img
+        src="activity/Relief.jpg"
+        alt="Relief"
+        class="absolute inset-0 w-full h-full object-cover
+               transition-transform duration-500 ease-out
+               group-hover:scale-105"
+    />
+
+    <div class="absolute inset-0 p-6 flex flex-col justify-end z-20">
+        <div class="w-10 h-10 bg-white/90 backdrop-blur rounded-full flex items-center justify-center text-pusak-text mb-3 shadow-md">
+		<svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+		  <path stroke-linecap="round" stroke-linejoin="round" d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z" />
+		</svg>
+        </div>
+        <h3 class="text-xl text-white font-semibold text-pusak-text mb-1">Relief and Aid</h3>
+        <p class="text-sm text-white">Immediate response teams for floods and emergency humanitarian aid.</p>
+    </div>
+
+    <div class="absolute inset-0 bg-gradient-to-t from-gray-900/60 to-transparent opacity-50 group-hover:opacity-100 transition-opacity duration-300"></div>
+</div>
+</a>
+
+
             </div>
         </div>
     </section>
@@ -426,68 +579,354 @@
 
             <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
                 <!-- Activity Item -->
-                <div class="group relative overflow-hidden rounded-2xl bg-gray-50 aspect-[4/5] md:aspect-[3/4]">
-                    <div class="absolute inset-0 p-6 flex flex-col justify-end z-20">
-                        <div class="w-10 h-10 bg-white/90 backdrop-blur rounded-full flex items-center justify-center text-pusak-text mb-3 shadow-md">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="mic-2" class="lucide lucide-mic-2 w-5 h-5"><path d="m11 7.601-5.994 8.19a1 1 0 0 0 .1 1.298l.817.818a1 1 0 0 0 1.314.087L15.09 12"></path><path d="M16.5 21.174C15.5 20.5 14.372 20 13 20c-2.058 0-3.928 2.356-6 2-2.072-.356-2.775-3.369-1.5-4.5"></path><circle cx="16" cy="7" r="5"></circle></svg>
-                        </div>
-                        <h3 class="text-xl font-semibold text-pusak-text mb-1">Advisory Panel</h3>
-                        <p class="text-sm text-pusak-text/70">Knowledge sharing</p>
-                    </div>
-                    <!-- Hover gradient -->
-                    <div class="absolute inset-0 bg-gradient-to-t from-gray-200 to-transparent opacity-50 group-hover:opacity-100 transition-opacity duration-300"></div>
-                </div>
+<!-- Activity Item -->
+<a href="advisory_panel.html" class="block no-underline text-inherit">
+<div class="group relative overflow-hidden rounded-2xl aspect-[4/5] md:aspect-[3/4] cursor-pointer">
 
-                <!-- Activity Item -->
-                <div class="group relative overflow-hidden rounded-2xl bg-gray-50 aspect-[4/5] md:aspect-[3/4]">
-                     <div class="absolute inset-0 p-6 flex flex-col justify-end z-20">
-                        <div class="w-10 h-10 bg-white/90 backdrop-blur rounded-full flex items-center justify-center text-pusak-text mb-3 shadow-md">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="laptop" class="lucide lucide-laptop w-5 h-5"><path d="M18 5a2 2 0 0 1 2 2v8.526a2 2 0 0 0 .212.897l1.068 2.127a1 1 0 0 1-.9 1.45H3.62a1 1 0 0 1-.9-1.45l1.068-2.127A2 2 0 0 0 4 15.526V7a2 2 0 0 1 2-2z"></path><path d="M20.054 15.987H3.946"></path></svg>
-                        </div>
-                        <h3 class="text-xl font-semibold text-pusak-text mb-1">Founding Panel</h3>
-                        <p class="text-sm text-pusak-text/70">Online learning</p>
-                    </div>
-                    <div class="absolute inset-0 bg-gradient-to-t from-gray-200 to-transparent opacity-50 group-hover:opacity-100 transition-opacity duration-300"></div>
-                </div>
+    <!-- FULL CARD IMAGE -->
+    <img
+      src="members/advisory_pic/member1.jpg"
+      alt="Advisory Panel"
+      class="absolute inset-0 w-full h-full object-cover"
+    />
 
-                 <!-- Activity Item -->
-                 <div class="group relative overflow-hidden rounded-2xl bg-gray-50 aspect-[4/5] md:aspect-[3/4]">
-                    <div class="absolute inset-0 p-6 flex flex-col justify-end z-20">
-                       <div class="w-10 h-10 bg-white/90 backdrop-blur rounded-full flex items-center justify-center text-pusak-text mb-3 shadow-md">
-                           <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="briefcase" class="lucide lucide-briefcase w-5 h-5"><path d="M16 20V4a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path><rect width="20" height="14" x="2" y="6" rx="2"></rect></svg>
-                       </div>
-                      <a href="executive_panel.html" class="no-underline text-inherit block">
-    <div class="group relative overflow-hidden rounded-2xl bg-gray-50 aspect-[4/5] md:aspect-[3/4] cursor-pointer">
-        <div class="absolute inset-0 p-6 flex flex-col justify-end z-20">
-            <div class="w-10 h-10 bg-white/90 backdrop-blur rounded-full flex items-center justify-center text-pusak-text mb-3 shadow-md">
-                <!-- your icon here -->
-            </div>
-            <h3 class="text-xl font-semibold text-pusak-text mb-1">Executive Panel</h3>
-            <p class="text-sm text-pusak-text/70">Future planning</p>
+    <!-- HOVER GRADIENT -->
+    <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent
+                opacity-60 group-hover:opacity-80 transition-opacity duration-300"></div>
+
+    <!-- CONTENT -->
+    <div class="absolute inset-0 p-6 flex flex-col justify-end z-10">
+        <div class="w-10 h-10 bg-white/90 backdrop-blur rounded-full
+                    flex items-center justify-center text-pusak-text
+                    mb-3 shadow-md">
+            <svg xmlns="http://www.w3.org/2000/svg"
+                 viewBox="0 0 24 24"
+                 fill="none"
+                 stroke="currentColor"
+                 stroke-width="2"
+                 stroke-linecap="round"
+                 stroke-linejoin="round"
+                 class="w-5 h-5">
+                <path d="m11 7.601-5.994 8.19a1 1 0 0 0 .1 1.298l.817.818a1 1 0 0 0 1.314.087L15.09 12"></path>
+                <path d="M16.5 21.174C15.5 20.5 14.372 20 13 20c-2.058 0-3.928 2.356-6 2-2.072-.356-2.775-3.369-1.5-4.5"></path>
+                <circle cx="16" cy="7" r="5"></circle>
+            </svg>
         </div>
 
-        <div class="absolute inset-0 bg-gradient-to-t from-gray-200 to-transparent opacity-50 group-hover:opacity-100 transition-opacity duration-300"></div>
+        <h3 class="text-xl font-semibold text-white mb-1">
+          Advisory Panel
+        </h3>
+        <p class="text-sm text-white/80">
+          Knowledge sharing
+        </p>
     </div>
+
+</div>
 </a>
-                      
-                   </div>
-                   <div class="absolute inset-0 bg-gradient-to-t from-gray-200 to-transparent opacity-50 group-hover:opacity-100 transition-opacity duration-300"></div>
-               </div>
+
+
+<!-- Activity Item -->
+<a href="founding_panel.html" class="block no-underline text-inherit">
+<div class="group relative overflow-hidden rounded-2xl aspect-[4/5] md:aspect-[3/4] cursor-pointer">
+
+    <!-- FULL CARD IMAGE -->
+    <img
+      src="members/founding_pic/member1.jpg"
+      alt="Founding Panel"
+      class="absolute inset-0 w-full h-full object-cover"
+    />
+
+    <!-- GRADIENT OVERLAY (hover works on whole card) -->
+    <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent
+                opacity-60 group-hover:opacity-80 transition-opacity duration-300"></div>
+
+    <!-- CONTENT -->
+    <div class="absolute inset-0 p-6 flex flex-col justify-end z-10">
+        <div class="w-10 h-10 bg-white/90 backdrop-blur rounded-full
+                    flex items-center justify-center text-pusak-text
+                    mb-3 shadow-md">
+            <svg xmlns="http://www.w3.org/2000/svg"
+                 viewBox="0 0 24 24"
+                 fill="none"
+                 stroke="currentColor"
+                 stroke-width="2"
+                 stroke-linecap="round"
+                 stroke-linejoin="round"
+                 class="w-5 h-5">
+                <path d="M18 5a2 2 0 0 1 2 2v8.526a2 2 0 0 0 .212.897l1.068 2.127a1 1 0 0 1-.9 1.45H3.62a1 1 0 0 1-.9-1.45l1.068-2.127A2 2 0 0 0 4 15.526V7a2 2 0 0 1 2-2z"></path>
+                <path d="M20.054 15.987H3.946"></path>
+            </svg>
+        </div>
+
+        <h3 class="text-xl font-semibold text-white mb-1">
+          Founding Panel
+        </h3>
+        <p class="text-sm text-white/80">
+          Online learning
+        </p>
+    </div>
+
+</div>
+</a>
+
+
+                 <!-- Activity Item -->
+<a href="executive_panel.html" class="block no-underline text-inherit">
+  <div class="group relative overflow-hidden rounded-2xl aspect-[4/5] md:aspect-[3/4] cursor-pointer">
+
+    <!-- FULL CARD IMAGE -->
+    <img
+      src="members/executive_pic/member1.jpg"
+      alt="A M Niaz Rahman"
+      class="absolute inset-0 w-full h-full object-cover"
+    />
+
+    <!-- GRADIENT OVERLAY -->
+    <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent
+                opacity-60 group-hover:opacity-80 transition-opacity duration-300"></div>
+
+    <!-- CONTENT -->
+    <div class="absolute inset-0 p-6 flex flex-col justify-end z-10">
+      
+      <!-- ICON -->
+      <div class="w-10 h-10 bg-white/90 backdrop-blur rounded-full
+                  flex items-center justify-center text-pusak-text
+                  mb-3 shadow-md">
+        <svg xmlns="http://www.w3.org/2000/svg"
+             viewBox="0 0 24 24"
+             fill="none"
+             stroke="currentColor"
+             stroke-width="2"
+             stroke-linecap="round"
+             stroke-linejoin="round"
+             class="w-5 h-5">
+          <path d="M16 20V4a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path>
+          <rect width="20" height="14" x="2" y="6" rx="2"></rect>
+        </svg>
+      </div>
+
+      <!-- TEXT -->
+      <h3 class="text-xl font-semibold text-white mb-1">
+        Executive Panel
+      </h3>
+      <p class="text-sm text-white/80">
+        Future planning
+      </p>
+    </div>
+
+  </div>
+</a>
+
 
                 <!-- Activity Item -->
-                <div class="group relative overflow-hidden rounded-2xl bg-gray-50 aspect-[4/5] md:aspect-[3/4]">
-                    <div class="absolute inset-0 p-6 flex flex-col justify-end z-20">
-                       <div class="w-10 h-10 bg-white/90 backdrop-blur rounded-full flex items-center justify-center text-pusak-text mb-3 shadow-md">
-                           <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="megaphone" class="lucide lucide-megaphone w-5 h-5"><path d="M11 6a13 13 0 0 0 8.4-2.8A1 1 0 0 1 21 4v12a1 1 0 0 1-1.6.8A13 13 0 0 0 11 14H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2z"></path><path d="M6 14a12 12 0 0 0 2.4 7.2 2 2 0 0 0 3.2-2.4A8 8 0 0 1 10 14"></path><path d="M8 6v8"></path></svg>
-                       </div>
-                       <h3 class="text-xl font-semibold text-pusak-text mb-1">Partners and Sponsors</h3>
-                       <p class="text-sm text-pusak-text/70">Social awareness</p>
-                   </div>
-                   <div class="absolute inset-0 bg-gradient-to-t from-gray-200 to-transparent opacity-50 group-hover:opacity-100 transition-opacity duration-300"></div>
-               </div>
+<!-- Activity Item -->
+<a href="partners_panel.html" class="block no-underline text-inherit">
+<div class="group relative overflow-hidden rounded-2xl aspect-[4/5] md:aspect-[3/4] cursor-pointer">
+
+    <!-- FULL CARD IMAGE -->
+    <img
+      src="members/partner_pic/member1.jpg"
+      alt="Partners and Sponsors"
+      class="absolute inset-0 w-full h-full object-cover"
+    />
+
+    <!-- HOVER GRADIENT -->
+    <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent
+                opacity-60 group-hover:opacity-80 transition-opacity duration-300"></div>
+
+    <!-- CONTENT -->
+    <div class="absolute inset-0 p-6 flex flex-col justify-end z-10">
+        <div class="w-10 h-10 bg-white/90 backdrop-blur rounded-full
+                    flex items-center justify-center text-pusak-text
+                    mb-3 shadow-md">
+            <svg xmlns="http://www.w3.org/2000/svg"
+                 viewBox="0 0 24 24"
+                 fill="none"
+                 stroke="currentColor"
+                 stroke-width="2"
+                 stroke-linecap="round"
+                 stroke-linejoin="round"
+                 class="w-5 h-5">
+                <path d="M11 6a13 13 0 0 0 8.4-2.8A1 1 0 0 1 21 4v12a1 1 0 0 1-1.6.8A13 13 0 0 0 11 14H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2z"></path>
+                <path d="M6 14a12 12 0 0 0 2.4 7.2 2 2 0 0 0 3.2-2.4A8 8 0 0 1 10 14"></path>
+                <path d="M8 6v8"></path>
+            </svg>
+        </div>
+
+        <h3 class="text-xl font-semibold text-white mb-1">
+          Partners and Sponsors
+        </h3>
+        <p class="text-sm text-white/80">
+          Social awareness
+        </p>
+    </div>
+
+</div>
+</a>
+
             </div>
         </div>
     </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<section class="dignitaries">
+    
+
+    <div class="container mx-auto px-4">
+
+    <div class="text-center mb-16">
+        <h2 class="text-3xl md:text-4xl font-semibold text-pusak-text tracking-tight mb-4">Messages from Respected Dignitaries</h2>
+        <p class="text-pusak-gray">Appreciation and encouragement for PUSAK’s community-driven initiatives.</p>
+    </div>
+
+    <div class="dignitary-grid grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
+
+        <!-- EXISTING 3 (UNCHANGED) -->
+        <div class="dignitary-card bg-white rounded-2xl shadow-lg overflow-hidden p-6 flex flex-col items-center text-center">
+            <img src="dignitaries/quote1.jpg" alt="UNO" class="w-32 h-32 object-cover rounded-full mb-4 border-4 border-pusak-green">
+            <p class="speech mb-4 text-pusak-gray">
+                “PUSAK’s contribution to education and social awareness
+                is highly commendable and beneficial for Kamalganj.”
+            </p>
+            <h3 class="font-semibold text-pusak-text">Md Asaduzzaman</h3>
+            <span class="text-sm text-pusak-gray">Upazila Nirbahi Officer (UNO)</span>
+        </div>
+
+        <div class="dignitary-card bg-white rounded-2xl shadow-lg overflow-hidden p-6 flex flex-col items-center text-center">
+            <img src="dignitaries/quote2.jpg" alt="UNO" class="w-32 h-32 object-cover rounded-full mb-4 border-4 border-pusak-green">
+            <p class="speech mb-4 text-pusak-gray">
+                “Public university students working together through PUSAK
+                demonstrate a strong commitment to education.”
+            </p>
+            <h3 class="font-semibold text-pusak-text">Ms. Sample Akter</h3>
+            <span class="text-sm text-pusak-gray">Thana Education Officer (TEO)</span>
+        </div>
+
+        <div class="dignitary-card bg-white rounded-2xl shadow-lg overflow-hidden p-6 flex flex-col items-center text-center">
+            <img src="https://images.unsplash.com/photo-1527980965255-d3b416303d12" alt="OC" class="w-32 h-32 object-cover rounded-full mb-4">
+            <p class="speech mb-4 text-pusak-gray">
+                “PUSAK plays an important role in building social harmony
+                and youth responsibility.”
+            </p>
+            <h3 class="font-semibold text-pusak-text">Mr. Demo Hossain</h3>
+            <span class="text-sm text-pusak-gray">Officer-in-Charge (OC)</span>
+        </div>
+
+        <!-- NEW 6 SPEECHES -->
+
+        <div class="dignitary-card bg-white rounded-2xl shadow-lg overflow-hidden p-6 flex flex-col items-center text-center">
+            <img src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d" alt="Advisor" class="w-32 h-32 object-cover rounded-full mb-4">
+            <p class="speech mb-4 text-pusak-gray">
+                “PUSAK reflects discipline, vision, and a genuine desire
+                to uplift the next generation through education.”
+            </p>
+            <h3 class="font-semibold text-pusak-text">Dr. Hasan Mahmud</h3>
+            <span class="text-sm text-pusak-gray">Advisor, PUSAK</span>
+        </div>
+
+        <div class="dignitary-card bg-white rounded-2xl shadow-lg overflow-hidden p-6 flex flex-col items-center text-center">
+            <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2" alt="Advisor" class="w-32 h-32 object-cover rounded-full mb-4">
+            <p class="speech mb-4 text-pusak-gray">
+                “The unity among public university students under PUSAK
+                is a powerful example of positive youth leadership.”
+            </p>
+            <h3 class="font-semibold text-pusak-text">Prof. Nusrat Jahan</h3>
+            <span class="text-sm text-pusak-gray">Advisor, PUSAK</span>
+        </div>
+
+        <div class="dignitary-card bg-white rounded-2xl shadow-lg overflow-hidden p-6 flex flex-col items-center text-center">
+            <img src="https://images.unsplash.com/photo-1552058544-f2b08422138a" alt="Advisor" class="w-32 h-32 object-cover rounded-full mb-4">
+            <p class="speech mb-4 text-pusak-gray">
+                “PUSAK’s structured approach towards social responsibility
+                sets a benchmark for student organizations.”
+            </p>
+            <h3 class="font-semibold text-pusak-text">Engr. Mahbub Alam</h3>
+            <span class="text-sm text-pusak-gray">Advisor, PUSAK</span>
+        </div>
+
+        <div class="dignitary-card bg-white rounded-2xl shadow-lg overflow-hidden p-6 flex flex-col items-center text-center">
+            <img src="https://i.ibb.co.com/jPDh7qdW/nfofjf.jpg" alt="President" class="w-32 h-32 object-cover rounded-full mb-4">
+            <p class="speech mb-4 text-pusak-gray">
+                “Our vision is to serve Kamalganj with integrity,
+                unity, and commitment through collective effort.”
+            </p>
+            <h3 class="font-semibold text-pusak-text">A M Niaz Rahman</h3>
+            <span class="text-sm text-pusak-gray">President, PUSAK</span>
+        </div>
+
+        <div class="dignitary-card bg-white rounded-2xl shadow-lg overflow-hidden p-6 flex flex-col items-center text-center">
+            <img src="https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e" alt="Senior Vice President" class="w-32 h-32 object-cover rounded-full mb-4">
+            <p class="speech mb-4 text-pusak-gray">
+                “PUSAK is not just an organization, it is a responsibility
+                we proudly carry for our community.”
+            </p>
+            <h3 class="font-semibold text-pusak-text">MD Ibrahim Ali</h3>
+            <span class="text-sm text-pusak-gray">Senior Vice President, PUSAK</span>
+        </div>
+
+        <div class="dignitary-card bg-white rounded-2xl shadow-lg overflow-hidden p-6 flex flex-col items-center text-center">
+            <img src="https://i.ibb.co.com/R4Y5yz7Y/79990474-5ae1-4150-9a92-3be4a2fd5c57.png" alt="General Secretary" class="w-32 h-32 object-cover rounded-full mb-4">
+            <p class="speech mb-4 text-pusak-gray">
+                “Through transparency and teamwork, PUSAK will continue
+                to expand its impact across Kamalganj.”
+            </p>
+            <h3 class="font-semibold text-pusak-text">Shahdad Khan Jholok</h3>
+            <span class="text-sm text-pusak-gray">General Secretary, PUSAK</span>
+        </div>
+
+    </div>
+</div>
+
+
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<br>
 
 
     <!-- CTA Section -->
@@ -520,9 +959,8 @@
         <div class="max-w-7xl mx-auto px-6">
             <div class="grid md:grid-cols-4 gap-12 mb-16">
                 <div class="col-span-1 md:col-span-2">
-                    <div class="flex items-center gap-2 mb-6">
-                        <div class="flex text-sm font-bold text-white w-8 h-8 rounded-md items-center justify-center">P</div>
-                        <span class="font-bold text-xl tracking-tight">PUSAK</span>
+                    <div class="flex items-center gap-2 mb-6 ">
+                        <img src="index_res/logo-bg.png" class="h-20 ">
                     </div>
                     <p class="text-gray-400 text-sm leading-relaxed max-w-sm mb-6">
                         Contributing to the sustainable development of Kamalganj Upazila through education, social service, and community-driven initiatives.
